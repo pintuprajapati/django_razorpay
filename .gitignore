@@ -1,0 +1,15 @@
+# Compiled Python bytecode
+*.py[cod]
+*__pycache__
+**/migrations/**
+
+# Directories
+.env
+media/
+/env/
+/envrazorpay/
+
+# db
+instance/
+*db
+db*
