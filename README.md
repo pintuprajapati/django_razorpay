@@ -1,5 +1,5 @@
 # Project
-RazorPay Payment Gatewat integration in Django with Callback functionality
+RazorPay Payment Gateway integration in Django with Callback functionality
 
 # How to run this project and test it on your system
 By following below steps, you'll be able to directly run this project and check/test the razorpay payment gateway.
