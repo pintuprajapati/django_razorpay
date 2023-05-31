@@ -1,10 +1,10 @@
-# Pr0ject
-RazorPay Payment Gatewat integration with Django
+# Project
+RazorPay Payment Gatewat integration in Django with Callback functionality
 
-# How to run this project and test on you system
+# How to run this project and test it on your system
 By following below steps, you'll be able to directly run this project and check/test the razorpay payment gateway.
 
-I have also provided some CARD details and official links for testing
+I have also provided some TEST CARD details and official links for testing
 
 ## Installation (venv and dependencies)
 - Create an virtual environment (venv) and activate it
@@ -31,17 +31,14 @@ I have also provided some CARD details and official links for testing
     ```
     python3 manage.py createsuperuser
     ```
-- Run the server and go to this url: http://127.0.0.1:8000/
-    ```
-    python3 manage.py runserver
-    ```
+
 # Razorpay Login and API KEY
 - You will have to create an account on razorpay site (https://razorpay.com/)
 - Now Generate 2 API Keys from here (https://dashboard.razorpay.com/#/app/keys)
     1. API KEY ID
     2. API SECRET ID
 
-- Keep it saved somewhere (for the late use)
+- Keep it saved somewhere (for the later use)
 - Now add both of these keys into your `settings.py` file at the bottom (replace the key in the project)
     ```
     # RazorPay API Key and API secret key
@@ -58,6 +55,11 @@ I have also provided some CARD details and official links for testing
     Django Version:	4.2.1
     Exception Type:	BadRequestError
     Exception Value:Authentication failed
+    ```
+
+- Run the django server and go to this url: http://127.0.0.1:8000/
+    ```
+    python3 manage.py runserver
     ```
 
 Hurrah!!! You have successfully installed and setup everything.
