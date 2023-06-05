@@ -1,5 +1,29 @@
 # Project
-RazorPay Payment Gateway integration in Django with Callback functionality
+RazorPay Payment Gateway integration in Django with Webhook functionality
+
+## Webhook
+- In simple terms, a webhook is a way for different applications or services to communicate with each other in real-time. It allows one application to send data or trigger actions in another application when a specific event occurs.
+- So we will need working host/url where the response from Razorpay will be redirected.
+- LocalHost URL won't work in this case. That' why we need `ngrok` to create a public url of our project/server.
+- For more details, visit the site (or google): https://ngrok.com/
+
+## ngrok
+- Read from offical docs or google on "How to setup ngrok account and create a public url"
+- Once you have everything setup
+    - First run django server (i.e. `python3 manage.py runserver`) by default it runs on `port:8000`
+    - Then run `ngrok` server on the same port on which django server is running (i.e. `http ngrok 8000`) 
+    - You will get a public url of django project which anyone can access over the internet (you can send it to your friends too xd)
+    - Now copy this public URL and set it to "Razorpay webhook settings" on razorpay site. (google it how)
+
+- Once you install the `requirements.txt`, it will automatically install the necessary lib/packages for ngrok
+- Then add belwo "ngrok settings" into your settings.py (In this project it's already added)
+    ```
+    # ngrok setttings
+    from pyngrok import ngrok
+    
+    ALLOWED_HOSTS = ["*"]
+    CORS_ALLOW_ALL_ORIGINS = True
+    ```
 
 # How to run this project and test it on your system
 By following below steps, you'll be able to directly run this project and check/test the razorpay payment gateway.

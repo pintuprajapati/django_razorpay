@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
+from pyngrok import ngrok
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,8 +26,10 @@ SECRET_KEY = "django-insecure--4q5aweq_s(h9lrmhunxtouos52dg&#wur)jh%65bo53w#20q-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# ngrok setttings
+ALLOWED_HOSTS = ["*"]
 
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
@@ -127,6 +130,6 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # RazorPay API Key and API secret key
 # You can define these keys into ".env" too
- 
+
 # RZP_API_KEY="razorpay_api_key"
 # RZP_API_SECRET="razorpay_api_secret_key"
